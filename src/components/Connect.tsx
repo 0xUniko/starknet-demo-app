@@ -11,6 +11,7 @@ export default function Connect() {
           onClick={() => connect(connector)}
           key={connector.id}
           name={connector.id}
+          id={connector.id}
           disabled={!connector.available()}
         >
           Connect {connector.id}

@@ -1,11 +1,7 @@
-import {
-  useAccount,
-  useBalance,
-  useContractWrite,
-} from "@starknet-react/core";
+import { useAccount, useBalance, useContractWrite } from "@starknet-react/core";
 import { FormEvent, useMemo, useState } from "react";
-import { uint256, stark } from "starknet";
-import {  truncate } from "../lib/utils";
+import { uint256, CallData } from "starknet";
+import { truncate } from "../lib/utils";
 import { parseFixed } from "@ethersproject/bignumber";
 
 // ERC20 token
@@ -46,7 +42,7 @@ export default function TokenForm() {
     } as const;
 
     // compile the calldata to send
-    const calldata = stark.compileCalldata({
+    const calldata = CallData.compile({
       recipient: to,
       amount: amountFormatted,
     });

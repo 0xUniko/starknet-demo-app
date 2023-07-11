@@ -9,11 +9,10 @@ export default function Connect() {
         <button
           className="btn"
           onClick={() => connect(connector)}
-          key={connector.id()}
+          key={connector.id}
           disabled={!connector.available()}
         >
-          Connect {connector.id()}
-          
+          Connect {connector.id}
         </button>
       ))}
     </div>

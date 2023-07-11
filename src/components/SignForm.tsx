@@ -1,6 +1,6 @@
 import { useAccount, useNetwork, useSignTypedData } from "@starknet-react/core";
 import { FormEvent, useState } from "react";
-import { shortString, typedData } from "starknet";
+import { typedData } from "starknet";
 
 export default function SignForm() {
   const [showSign, setShowSign] = useState(false);
@@ -8,6 +8,7 @@ export default function SignForm() {
 
   const { isConnected } = useAccount();
   const { chain } = useNetwork();
+  console.log({ chain });
 
   // Signed message must follow EIP712
   // https://www.starknetjs.com/docs/guides/signature
@@ -24,7 +25,7 @@ export default function SignForm() {
     domain: {
       name: "Starknet demo app",
       version: "1",
-      chainId: shortString.decodeShortString(chain?.id as string),
+      // chainId: shortString.decodeShortString(chain?.id as string),
     },
     message: {
       message,

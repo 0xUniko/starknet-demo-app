@@ -16,7 +16,7 @@ function App() {
         {isConnected ? (
           <div>
             <h1 className="title text-4xl shadowed mb-8">Demo starknet dapp</h1>
-            <p>Hello, {address}</p>
+            <p id="address">{address}</p>
             <TokenForm />
           </div>
         ) : (

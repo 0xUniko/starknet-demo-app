@@ -13,7 +13,7 @@
     "@ethersproject/bignumber": "^5.7.0",
     "@starknet-react/core": "^1.0.3",
     "get-starknet": "^3.0.1",
-    "graphql": "^16.7.1",
+    "graphql": "^16.8.1",
     "graphql-request": "^6.1.0",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
